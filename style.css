@@ -1,0 +1,35 @@
+#box {
+    width: 400px;
+    line-height: 10px;
+}
+
+input {
+    width: 380px;
+    height: 29px;
+    border: 1px solid rgb(202, 200, 200);
+}
+
+#title {
+    color: red;
+    font-size: 20px;
+}
+
+span {
+    color: red;
+}
+
+#search {
+    width: 385px;
+    height: 33px;
+}
+
+#submit {
+    width: 383px;
+    height: 29px;
+    background-color: rgb(223, 221, 221);
+    border: 1px solid rgb(187, 186, 186);
+}
+
+#date {
+    height: 30px;
+}
