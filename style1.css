@@ -1,0 +1,88 @@
+fieldset {
+    width: 700px;
+    height: 300px;
+}
+
+legend {
+    font-size: 50px;
+    font-weight: bolder;
+    color: red;
+}
+
+#box {
+    width: 500px;
+    height: 250px;
+}
+
+#color {
+    width: 649px;
+    height: 55px;
+    border: 1.5px solid silver;
+    padding-left: 4px;
+    list-style: none;
+}
+
+li {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+}
+
+#textbox {
+    width: 660px;
+    height: 100px;
+    font-size: 19px;
+    margin-top: 40px;
+    margin-left: 25px;
+    line-height: 40px;
+}
+
+.one {
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: rgb(199, 197, 197);
+}
+
+.two {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(245, 132, 245);
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.three {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(248, 192, 201);
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.four {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(35, 247, 229);
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.five {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(231, 231, 25);
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.six {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(98, 240, 98);
+    margin-top: 20px;
+    margin-left: 5px;
+}

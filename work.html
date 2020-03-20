@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>网页换肤</legend>
+        <div id="box">
+            <ul id="color">
+                <li class="one"></li>
+                <li class="two"></li>
+                <li class="three"></li>
+                <li class="four"></li>
+                <li class="five"></li>
+                <li class="six"></li>
+            </ul>
+            <div id="textbox" class="one">
+                LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用。
+            </div>
+        </div>
+    </fieldset>
+
+</body>
+<script>
+    var textbox = document.getElementById("textbox");
+    var color = document.getElementsByTagName("li");
+    var colors = ['rgb(199, 197, 197)', 'rgb(245, 132, 245)', 'rgb(248, 192, 201)', 'rgb(35, 247, 229)', 'rgb(231, 231, 25)', 'rgb(98, 240, 98)'];
+    if (window.localStorage) {
+        for (var i = 0; i < color.length; i++) {
+            color[i].style.background = colors[i];
+            color[i].index = i;
+            color[i].onclick = function() {
+                textbox.style.background = colors[this.index];
+                textbox.className = this.className;
+                window.localStorage.setItem('bgc', this.className);
+                for (var j = 0; j < color.length; j++) {
+                    if (color[j] == this) {
+                        color[j].style.bottom = window.localStorage.getItem('top');
+                    } else {
+                        color[j].style.bottom = 0 + "px";
+                    }
+                }
+            }
+        }
+        if (window.localStorage.getItem('bgc')) {
+            textbox.className = window.localStorage.getItem('bgc');
+        }
+        window.localStorage.setItem('top', 12 + "px");
+        if (window.localStorage.getItem('top')) {
+            for (var i = 0; i < color.length; i++) {
+                if (textbox.className == color[i].className) {
+                    color[i].style.bottom = window.localStorage.getItem('top');
+                }
+            }
+        }
+    } else {
+        alert("您的浏览器不支持localstorage.");
+    }
+</script>
+
+</html>
